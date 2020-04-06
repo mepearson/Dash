@@ -269,7 +269,7 @@ def build_spatial_datatable(spatialdata):
     if spatialdata is None:
         raise PreventUpdate
     df = pd.read_json(spatialdata, orient='split')
-    dtable = dt.DataTable(
+    dtable = dash_table.DataTable(
 # Table Data
             id='spatial_dtable',
             data=df.to_dict('records'),
@@ -298,7 +298,7 @@ def build_graphing_datatable(graphingdata):
         return 'No data loaded'
         # raise PreventUpdate
     df = pd.read_json(graphingdata, orient='split')
-    dtable = dt.DataTable(
+    dtable = dash_table.DataTable(
 # Table Data
             id='graphing_dtable',
             data=df.to_dict('records'),
