@@ -212,7 +212,7 @@ def parse_contents(contents, filename):
 
 # Build dash data table from dataframe
 def create_datatable(dataframe):
-    dtable = dt.DataTable(
+    dtable = dash_table.DataTable(
         # Table Data
                     id='dtable',
                     data=dataframe.to_dict('records'),
